@@ -1,0 +1,17 @@
+﻿<div class="p-2">
+    <div ng-repeat="x in data | filter: datatype" >
+        <div ng-if="x.val">
+            <div ng-if="!x.val.includes('|')">
+                <div class="{{datatype==='productDetails'?'lead m-1':'m-1'}}">
+                    <span class="font-weight-bold">{{x.title | translate}}:</span> 
+                    <span class="{{datatype==='productDetails'?'float-right':''}}">{{x.val | translate}} {{x.unit | translate}}</span>
+                </div>
+            </div>
+            <div ng-if="x.val.includes('|')" class="row" >
+                <div class="col-sm-4" ng-repeat="y in x.val.split('|')">
+                    <p class="m-1"><i class="fa fa-{{x.favicon}}"></i> {{y | translate}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

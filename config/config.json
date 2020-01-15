@@ -1,0 +1,28 @@
+﻿{
+  "debug": true,
+  "url": "https://www.vistanekretnine.hr",
+  "domain": "vistanekretnine.hr",
+  "sitename": "Vista Nekretnine",
+  "showcarddesc": false,
+  "showgooglemap": false,
+  "showlang": true,
+  "showfollow": false,
+  "languages": [
+    {
+      "code": "hr",
+      "title": "croatian"
+    },
+    {
+      "code": "en",
+      "title": "english"
+    },
+    {
+      "code": "ru",
+      "title": "russian"
+    }
+  ],
+  "lang": {
+    "code": "hr",
+    "title": "croatian"
+  }
+}
