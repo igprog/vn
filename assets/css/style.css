@@ -380,10 +380,6 @@ header {
     width: 50%
 }
 
-.contact-padding {
-    padding:50px 50px 20px 300px
-}
-
 .carousel-inner img {
     width: 100%;
     height: 82vh;
@@ -391,6 +387,12 @@ header {
 
 .float-right {
     float:right;
+}
+
+@media (min-width: 1600px) {
+    .contact-padding {
+        padding: 10px 0px 20px 300px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -425,15 +427,15 @@ header {
     .follow-img {
         width: 80%;
     }
-    .contact-padding {
-        padding: 10px 0px 20px 0px;
-    }
     .carousel-inner img {
         width: 100%;
         height: 100%;
     }
     .zoom-in {
         cursor: auto;
+    }
+    .padding-left-resp {
+	padding-left: 10px;
     }
 
 }
@@ -449,11 +451,11 @@ header {
     .follow-img {
         width: 80%;
     }
-    .contact-padding {
-        padding: 10px 0px 20px 0px;
-    }
     .carousel-inner img {
         width: 100%;
         height: 100%;
+    }
+    .padding-left-resp {
+        padding-left: 2px;
     }
 }

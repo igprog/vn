@@ -348,6 +348,16 @@ angular.module('app', ['ngStorage', 'pascalprecht.translate', 'ngMaterial'])
 .controller('optionsCtrl', ['$scope', '$translate', ($scope, $translate) => {
 }])
 
+.directive('servicesDirective', () => {
+    return {
+        restrict: 'E',
+        scope: {
+            data: '='
+        },
+        templateUrl: './assets/partials/directive/services.html'
+    };
+})
+
 .directive('allowOnlyNumbers', function () {
     return {
         restrict: 'A',
