@@ -66,10 +66,10 @@
   "Elevator": "Lift",
   "Swimming pool": "Bazen",
   "heating": "Grijanje",
-  "Electrical underfloor heating": "Elekrtično podno grijanje",
+  "Electrical underfloor heating": "Električno podno grijanje",
   "energy class": "Energetski razred",
   "Energy certification is being acquired": "Energetski certifikat je u izradi",
-  "orientation": "Orjentacija",
+  "orientation": "Orijentacija",
   "Southeast": "Jugoistok",
   "transport": "Prijevoz",
   "Car": "Automobil",
@@ -89,5 +89,6 @@
   "Center distance: 400 m": "Udaljenost od centra: 400 m",
   "surface areas": "Površine",
   "main project": "Glavni projekt",
-  "documents": "Dokumenti"
+  "documents": "Dokumenti",
+  "Store": "Trgovina"
 }
