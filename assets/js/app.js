@@ -296,6 +296,7 @@ angular.module('app', ['ngStorage', 'pascalprecht.translate', 'ngMaterial'])
 .controller('galleryCtrl', ['$scope', '$translate', '$mdDialog', ($scope, $translate, $mdDialog) => {
     
     var openPopup = function (x, idx) {
+        if ($(window).innerWidth() < 560) { return false; }
         $mdDialog.show({
             controller: popupCtrl,
             templateUrl: './assets/partials/popup/gallery.html',

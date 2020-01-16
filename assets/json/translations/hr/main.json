@@ -44,6 +44,7 @@
   "price": "Cijena",
   "price hrk": "Cijena (HRK)",
   "realestate type": "Vrsta nekretnine",
+  "Flat": "Stan",
   "square size": "Površina",
   "total rooms": "Ukupan broj soba",
   "bedrooms": "Spavaće sobe",
@@ -85,5 +86,8 @@
   "Public transport": "Javni prijevoz",
   "Proximity to the sea": "Blizina mora",
   "Public transport distance: 300 m": "Udaljenost od javnog prijevoza: 300 m",
-  "Center distance: 400 m": "Udaljenost od centra: 400 m"
+  "Center distance: 400 m": "Udaljenost od centra: 400 m",
+  "surface areas": "Površine",
+  "main project": "Glavni projekt",
+  "documents": "Dokumenti"
 }

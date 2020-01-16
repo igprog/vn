@@ -40,6 +40,8 @@ namespace Igprog {
 
         public class RecordType {
             public string services = "services";
+            public string shortDesc = "shortDesc";
+            public string longDesc = "longDesc";
             public string about = "about";
             public string productTitle = "productTitle";
             public string productShortDesc = "productShortDesc";

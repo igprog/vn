@@ -8,7 +8,7 @@ style.css
 body {
     position: relative;
     color: #000;
-    background: #fff;
+    background: #fafafa;
 }
 .banner {
     background: url("../img/banner.jpg") no-repeat center center;
@@ -99,14 +99,6 @@ footer .glyphicon {
     cursor: zoom-in;
 }
 
-.slideanim {visibility:hidden;}
-.slide {
-    animation-name: slide;
-    -webkit-animation-name: slide;
-    animation-duration: 1s;
-    -webkit-animation-duration: 1s;
-    visibility: visible;
-}
 @keyframes slide {
 0% {
     opacity: 0;
@@ -137,7 +129,7 @@ footer .glyphicon {
     background-color: #4e4e4e !important;
 }
 .text-primary {
-    color: #000 !important;
+    color: #20708f !important;
 }
 .text-shadow {
     text-shadow: 2px 2px #828181;
@@ -393,26 +385,40 @@ header {
     padding-left: 200px;
 }
 
+.padding-resp-5 {
+    padding: 0 5% 0 5%;
+}
+.logo-size {
+    height:42px;
+}
+
 @media (min-width: 1600px) {
     .contact-padding {
         padding: 10px 0px 20px 300px;
     }
 }
-
+@media (max-width: 1600px) {
+    .padding-resp-5 {
+        padding: 0 4% 0 4%;
+    }
+}
 @media (min-width: 992px) {
   header {
     padding: 106px 0 100px;
   }
 }
 @media (max-width: 992px) {
-  header {
-    padding: 10px 0 100px;
-  }
-  h1 {
-    font-size:35px !important;
-  }
+    header {
+        padding: 10px 0 100px;
+    }
+    h1 {
+        font-size: 35px !important;
+    }
     .follow-img {
         width: 80%;
+    }
+    .padding-resp-5 {
+        padding: 0 3% 0 3%;
     }
 }
 
@@ -441,7 +447,19 @@ header {
     .padding-left-resp {
         padding-left: 10px;
     }
+    .padding-resp-5 {
+        padding: 0 2% 0 2%;
+    }
+    .logo-size {
+        height: 38px;
+    }
 
+}
+
+@media screen and (max-width: 450px) {
+      .logo-size {
+        height: 30px;
+    }
 }
 
 @media screen and (max-height: 450px) {
@@ -461,5 +479,8 @@ header {
     }
     .padding-left-resp {
         padding-left: 2px;
+    }
+    .padding-resp-5 {
+        padding: 0 1% 0 1%;
     }
 }

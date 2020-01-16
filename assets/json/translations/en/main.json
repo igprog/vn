@@ -45,6 +45,7 @@
   "price": "Price",
   "price hrk": "Price (HRK)",
   "realestate type": "Realestate type",
+  "Flat": "Flat",
   "square size": "Square size",
   "total rooms": "Total rooms",
   "bedrooms": "Bedrooms",
@@ -86,5 +87,8 @@
   "Public transport": "Public transport",
   "Proximity to the sea": "Proximity to the sea",
   "Public transport distance: 300 m": "Public transport distance: 300 m",
-  "Center distance: 400 m": "Center distance: 400 m"
+  "Center distance: 400 m": "Center distance: 400 m",
+  "surface areas": "Surface areas",
+  "main project": "Main project",
+  "documents": "Documents"
 }

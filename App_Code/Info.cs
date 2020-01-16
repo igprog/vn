@@ -95,9 +95,11 @@ public class Info : System.Web.Services.WebService {
         string json = ReadFile();
         if (!string.IsNullOrEmpty(json)) {
             x = JsonConvert.DeserializeObject<NewInfo>(json);
-            List<Tran.NewTran> tran = T.LoadData(null, G.recordType.about, lang);
+            List<Tran.NewTran> tran = T.LoadData(null, G.recordType.shortDesc, lang);
             x.shortDesc = !string.IsNullOrEmpty(lang) && tran.Count > 0 ? tran[0].tran : x.shortDesc;
+            tran = T.LoadData(null, G.recordType.longDesc, lang);
             x.longDesc = !string.IsNullOrEmpty(lang) && tran.Count > 0 ? tran[0].tran : x.longDesc;
+            tran = T.LoadData(null, G.recordType.about, lang);
             x.about = !string.IsNullOrEmpty(lang) && tran.Count > 0 ? tran[0].tran : x.about;
             tran = T.LoadData(null, G.recordType.services, lang);
             x.services = !string.IsNullOrEmpty(lang) && tran.Count > 0 ? tran[0].tran : x.services;
