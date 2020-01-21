@@ -1,4 +1,6 @@
 ﻿{
+  "site_title": "Vista Nekretnine | Prodaja luksuznih stanova",
+  "site_desc": "Stan se nalazi u mirnom dijelu u blizini svih sadržaja s otvorenim pogledom na more na drugom katu zgrade s šest stanova i sastoji se od ulaza, hodnika, dvije kupaonice, spremišta, dnevnog boravka s kuhinjom i blagavaonicom te velikom terasom od 25,80 m2, sveukupne netto površine stambenog prostora od 119,10 m2 s priadakom spremišta od 3,5 m2 i dva parkirna mjesta u garaži od 25 m2 te dijelom okućnice na korištenje.",
   "croatian": "Hrvatski",
   "english": "Engleski",
   "russian": "Ruski",
@@ -14,7 +16,7 @@
   "pin": "OIB",
   "phone": "Telefon",
   "email": "Email",
-  "send inquiry": "Pošaljite nam upit",
+  "send inquiry": "Pošaljite upit",
   "name": "Ime",
   "message": "Poruka",
   "follow us": "Pratite nas na društvenim mrežama",

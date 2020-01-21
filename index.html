@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="hr">
+<html ng-app="app" ng-controller="appCtrl" lang="en" >
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156335343-1"></script>
@@ -10,13 +10,13 @@
 
   gtag('config', 'UA-156335343-1');
     </script>-->
-    <title>Vista Nekretnine | Prodaja luksuznih stanova</title>
+    <title ng-bind="'site_title' | translate"></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Stan se nalazi u mirnom dijelu u blizini svih sadržaja s otvorenim pogledom na more na drugom katu zgrade s šest stanova i sastoji se od ulaza, hodnika, dvije kupaonice, spremišta, dnevnog boravka s kuhinjom i blagavaonicom te velikom terasom od 25,80 m2, sveukupne netto površine stambenog prostora od 119,10 m2 s priadakom spremišta od 3,5 m2 i dva parkirna mjesta u garaži od 25 m2 te dijelom okućnice na korištenje.">
     <meta name="author" content="IG PROG, vl. Igor Gašparović">
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Vista Nekretnine | Prodaja luksuznih stanova" />
+    <meta property="og:title" content="{{'site_title' | translate}}" />
     <meta property="og:description" content="OPATIJA, stan u novogradnji sveukupne površine 134,42 m2." />
     <meta property="og:url" content="https://www.vistanekretnine.hr" />
     <meta property="og:image" content="https://www.vistanekretnine.hr/assets/img/banner.jpg">
@@ -51,8 +51,8 @@
         }*/
     </style>
 </head>
-<body id="home" ng-app="app" ng-controller="appCtrl" data-spy="scroll" data-target=".navbar" data-offset="60" ng-cloak>
-    <nav class="navbar navbar-expand-lg fixed-top">
+<body ng-if="config" id="home" data-spy="scroll" data-target=".navbar" data-offset="60" >
+    <nav class="navbar navbar-expand-lg fixed-top" ng-cloak>
         <a href="index.html" title="{{config.sitename}}">
             <img src="../assets/img/logo.png" class="logo-size" alt="{{config.sitename}}" />
         </a>
@@ -92,7 +92,7 @@
             </ul>
         </div>
     </nav>
-    <div id="mySidenav" class="sidenav text-uppercase" onclick="closeNav()">
+    <div id="mySidenav" class="sidenav text-uppercase" onclick="closeNav()" ng-cloak>
         <!--<a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="padding-top:100px">&times;</a>-->
         <!--<div class="mt-5">
             <a>{{'menu' | translate}}</a><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -109,7 +109,7 @@
 
     <loading-directive value="d.loading" size="5"></loading-directive>
 
-    <div class="text-center pt-3" onclick="closeNav()">
+    <div class="text-center pt-3" onclick="closeNav()" ng-cloak>
         <h1>{{info.company | translate}}</h1>
         <h2>{{'luxury apartments for sale' | translate}}</h2>
         <hr />
