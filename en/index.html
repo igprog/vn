@@ -1,23 +1,23 @@
 ﻿<!DOCTYPE html>
-<html ng-app="app" ng-controller="appCtrl" lang="hr" >
+<html ng-app="app" ng-controller="appCtrl" lang="en">
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156335343-1"></script>
-    <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+      <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'UA-156335343-1');
-    </script>-->
-    <title>Vista Nekretnine | Prodaja luksuznih stanova</title>
+    gtag('config', 'UA-156335343-1');
+      </script>-->
+    <title>Vista Nekretnine d.o.o. | Luxury apartments for sale</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Luksuzno opremljen stan površine 135,90 m2 nalazi se u mirnom dijelu Opatije u blizini svih sadržaja s otvorenim pogledom na more.">
+    <meta name="description" content="Luxury apartments for sale in Opatija. The apartment is located in a quiet area near all amenities with an open sea view">
     <meta name="author" content="IG PROG, vl. Igor Gašparović">
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Vista Nekretnine | Prodaja luksuznih stanova" />
-    <meta property="og:description" content="Luksuzno opremljen stan površine 135,90 m2 nalazi se u mirnom dijelu Opatije u blizini svih sadržaja s otvorenim pogledom na more." />
+    <meta property="og:title" content="Vista Nekretnine d.o.o. | Luxury apartments for sale" />
+    <meta property="og:description" content="Luxury apartments for sale in Opatija. The apartment is located in a quiet area near all amenities with an open sea view" />
     <meta property="og:url" content="https://www.vistanekretnine.hr" />
     <meta property="og:image" content="https://www.vistanekretnine.hr/assets/img/banner.jpg">
     <meta property="og:image:type" content="image/png">
@@ -51,8 +51,8 @@
         }*/
     </style>
 </head>
-<body ng-init="setLang({code:'hr', title:'croatian'})" ng-if="config" id="home" data-spy="scroll" data-target=".navbar" data-offset="60" >
-   
+<body ng-if="config" ng-init="setLang({code:'en', title:'english'})" id="home" data-spy="scroll" data-target=".navbar" data-offset="60">
+
     <nav class="navbar navbar-expand-lg fixed-top" ng-cloak>
         <a href="index.html" title="{{config.sitename}}">
             <img src="../assets/img/logo.png" class="logo-size" alt="{{config.sitename}}" />
@@ -106,14 +106,14 @@
         <a ng-if="info.about" href="#section5" title="{{'about us' | translate}}">{{'about us' | translate}}</a>
         <a href="#section6" title="{{'contact' | translate}}">{{'contact' | translate}}</a>
     </div>
-    
+
     <header class="text-white banner"></header>
 
     <loading-directive value="d.loading" size="5"></loading-directive>
 
     <div class="text-center pt-3" onclick="closeNav()" ng-cloak>
         <h1>Vista Nekretnine d.o.o.</h1>
-        <h2>Prodaja luksuznih stanova</h2>
+        <h2>Luxury apartments for sale</h2>
         <!--<h1>{{info.company | translate}}</h1>
         <h2>{{'luxury apartments for sale' | translate}}</h2>-->
         <hr />
@@ -204,7 +204,7 @@
         <div ng-if="config.showfollow" class="container slideanim text-left pt-5">
             <div class="row">
                 <div class="col text-right pr-5 div-wrapper">
-                    <img src="./assets/img/smartphone.png" alt="smartphone.png" class="img-fluid follow-img" />
+                    <img src="../assets/img/smartphone.png" alt="smartphone.png" class="img-fluid follow-img" />
                 </div>
                 <div class="col" style="padding:100px 20px 100px 20px">
                     <h2 class="text-primary text-uppercase">{{'follow us' | translate}}</h2>
@@ -217,10 +217,10 @@
             </div>
         </div>
     </div>
-    
+
     <div id="section6" class="footer" onclick="closeNav()">
         <div class="container-fluid section text-white padding-resp-5 slideanim tranparent pt-5">
-          <ng-include src="'./assets/partials/contact.html'"></ng-include>
+            <ng-include src="'../assets/partials/contact.html'"></ng-include>
             <div class="fixed text-right d-none d-sm-block" style="margin:0 20px 80px 0">
                 <a href="#home" title="{{'on top' | translate}}" class="text-primary">
                     <span class="fa fa-chevron-up fa-3x"></span>
@@ -229,7 +229,7 @@
             <footer-directive sitename="config.sitename"></footer-directive>
         </div>
     </div>
-    
+
 
     <script src="../assets/js/app.js"></script>
     <script type="text/javascript" src="../assets/js/vendor/jquery.floating-social-share.min.js"></script>
@@ -281,7 +281,7 @@
               "facebook", "google-plus", "twitter", "pinterest"
             ],
             twitter_counter: true,
-            text: "Podijeli sa: ",
+            text: "Follow us: ",
             url: "https://www.vistanekretnine.hr/"
         });
     </script>

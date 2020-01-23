@@ -26,7 +26,7 @@ angular.module('app', ['ngStorage', 'pascalprecht.translate', 'ngMaterial'])
     return {
         post: (service, method, data) => {
             return $http({
-                url: './' + service + '.asmx/' + method,
+                url: '../' + service + '.asmx/' + method,
                 method: 'POST',
                 data: data
             })
@@ -108,7 +108,7 @@ angular.module('app', ['ngStorage', 'pascalprecht.translate', 'ngMaterial'])
         $rootScope.lang = $sessionStorage.lang;
         $translate.use(x.code);
         $translatePartialLoader.addPart('main');
-        window.location.href = window.location.origin + '?lang=' + x.code;
+        //window.location.href = window.location.origin + '?lang=' + x.code;
         loadProducts();
         loadInfo();
         loadServices();
@@ -224,7 +224,7 @@ angular.module('app', ['ngStorage', 'pascalprecht.translate', 'ngMaterial'])
             gallery: '=',
             options: '='
         },
-        templateUrl: './assets/partials/directive/details.html'
+        templateUrl: '../assets/partials/directive/details.html'
     };
 })
 
@@ -235,7 +235,7 @@ angular.module('app', ['ngStorage', 'pascalprecht.translate', 'ngMaterial'])
             site: '=',
             lang: '='
         },
-        templateUrl: './assets/partials/directive/navbar.html'
+        templateUrl: '../assets/partials/directive/navbar.html'
     };
 })
 
@@ -251,7 +251,7 @@ angular.module('app', ['ngStorage', 'pascalprecht.translate', 'ngMaterial'])
             showdesc: '=',
             lang: '='
         },
-        templateUrl: './assets/partials/directive/card.html'
+        templateUrl: '../assets/partials/directive/card.html'
     };
 })
 
@@ -265,7 +265,7 @@ angular.module('app', ['ngStorage', 'pascalprecht.translate', 'ngMaterial'])
             pdf: '=',
             size: '='
         },
-        templateUrl: './assets/partials/directive/loading.html'
+        templateUrl: '../assets/partials/directive/loading.html'
     };
 })
 
@@ -275,7 +275,7 @@ angular.module('app', ['ngStorage', 'pascalprecht.translate', 'ngMaterial'])
         scope: {
             sitename: '='
         },
-        templateUrl: './assets/partials/directive/footer.html',
+        templateUrl: '../assets/partials/directive/footer.html',
         controller: 'footerCtrl'
     };
 })
@@ -289,7 +289,7 @@ angular.module('app', ['ngStorage', 'pascalprecht.translate', 'ngMaterial'])
         scope: {
             data: '='
         },
-        templateUrl: './assets/partials/directive/gallery.html',
+        templateUrl: '../assets/partials/directive/gallery.html',
         controller: 'galleryCtrl'
     };
 })
@@ -299,7 +299,7 @@ angular.module('app', ['ngStorage', 'pascalprecht.translate', 'ngMaterial'])
         if ($(window).innerWidth() < 560) { return false; }
         $mdDialog.show({
             controller: popupCtrl,
-            templateUrl: './assets/partials/popup/gallery.html',
+            templateUrl: '../assets/partials/popup/gallery.html',
             parent: angular.element(document.body),
             clickOutsideToClose: true,
             d: { data: x, idx: idx }
@@ -342,7 +342,7 @@ angular.module('app', ['ngStorage', 'pascalprecht.translate', 'ngMaterial'])
             data: '=',
             datatype: '='
         },
-        templateUrl: './assets/partials/directive/options.html',
+        templateUrl: '../assets/partials/directive/options.html',
         controller: 'optionsCtrl'
     };
 })
@@ -355,7 +355,7 @@ angular.module('app', ['ngStorage', 'pascalprecht.translate', 'ngMaterial'])
         scope: {
             data: '='
         },
-        templateUrl: './assets/partials/directive/services.html'
+        templateUrl: '../assets/partials/directive/services.html'
     };
 })
 
