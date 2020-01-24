@@ -6,7 +6,7 @@ angular.module('app', ['ngStorage', 'pascalprecht.translate', 'ngMaterial'])
 .config(['$httpProvider', '$translateProvider', '$translatePartialLoaderProvider', ($httpProvider, $translateProvider, $translatePartialLoaderProvider) => {
 
     $translateProvider.useLoader('$translatePartialLoader', {
-        urlTemplate: './assets/json/translations/{lang}/{part}.json'
+        urlTemplate: '../assets/json/translations/{lang}/{part}.json'
     });
     $translateProvider.preferredLanguage('hr');
     $translatePartialLoaderProvider.addPart('main');
@@ -48,7 +48,7 @@ angular.module('app', ['ngStorage', 'pascalprecht.translate', 'ngMaterial'])
     }
 }])
 
-.controller('appCtrl', ['$scope', '$http', '$rootScope', 'f', '$sessionStorage', '$translate', '$translatePartialLoader', function ($scope, $http, $rootScope, f, $sessionStorage, $translate, $translatePartialLoader) {
+.controller('appCtrl', ['$scope', '$http', '$rootScope', 'f', '$sessionStorage', '$translate', '$translatePartialLoader', '$anchorScroll', '$location', function ($scope, $http, $rootScope, f, $sessionStorage, $translate, $translatePartialLoader, $anchorScroll, $location) {
 
     var queryString = location.search;
     var params = queryString.split('&');
@@ -144,6 +144,15 @@ angular.module('app', ['ngStorage', 'pascalprecht.translate', 'ngMaterial'])
             $scope.d.services = d;
         });
     }
+
+    $scope.goto = function (x) {
+        var newHash = 'section' + x;
+        if ($location.hash() !== newHash) {
+            $location.hash('section' + x);
+        } else {
+            $anchorScroll();
+        }
+    };
 
 }])
 

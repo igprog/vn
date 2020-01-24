@@ -10,7 +10,7 @@
 
   gtag('config', 'UA-156335343-1');
     </script>-->
-    <title>Vista Nekretnine | Prodaja luksuznih stanova</title>
+    <title>Vista Nekretnine | Prodaja luksuznih stanova | Opatija</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Luksuzno opremljen stan površine 135,90 m2 nalazi se u mirnom dijelu Opatije u blizini svih sadržaja s otvorenim pogledom na more.">
@@ -63,7 +63,6 @@
             </label>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item" href="../{{x.code=='hr'?'':x.code}}" ng-repeat="x in config.languages"><img src="../assets/img/lang/{{x.code}}.svg" alt="{{x.code}}" /> {{x.title | translate}}</a>
-                <!--<a class="dropdown-item" href="" ng-repeat="x in config.languages" ng-click="setLang(x)"><img src="../assets/img/lang/{{x.code}}.svg" alt="{{x.code}}" /> {{x.title | translate}}</a>-->
             </div>
         </div>
         <button class="navbar-toggler" type="button" aria-label="Toggle navigation" onclick="openNav()">
@@ -74,22 +73,22 @@
         <div class="collapse navbar-collapse text-uppercase" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#section1" title="description">{{'description' | translate}}</a>
+                    <a class="nav-link" href="#section1" title="{{'description' | translate}}">{{'description' | translate}}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#section2" title="gallery">{{'gallery' | translate}}</a>
+                    <a class="nav-link" href="#section2" title="{{'gallery' | translate}}">{{'gallery' | translate}}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#section3" title="attributes">{{'attributes' | translate}}</a>
+                    <a class="nav-link" href="#section3" title="{{'attributes' | translate}}">{{'attributes' | translate}}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#section4" title="location">{{'location' | translate}}</a>
+                    <a class="nav-link" href="#section4" title="{{'location' | translate}}">{{'location' | translate}}</a>
                 </li>
                 <li ng-if="info.about" class="nav-item">
-                    <a class="nav-link" href="#section5" title="about us">{{'about us' | translate}}</a>
+                    <a class="nav-link" href="#section5" title="{{'about us' | translate}}">{{'about us' | translate}}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#section6" title="kontakt">{{'contact' | translate}}</a>
+                    <a class="nav-link" href="#section6" title="{{'contact' | translate}}">{{'contact' | translate}}</a>
                 </li>
             </ul>
         </div>
