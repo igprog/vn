@@ -1,0 +1,55 @@
+﻿<div>
+    <nav class="navbar navbar-expand-lg fixed-top" ng-cloak>
+        <a href="index.html" title="{{config.sitename}}">
+            <img src="../assets/img/logo.png" class="logo-size" alt="{{config.sitename}}" />
+        </a>
+        <div class="dropdown padding-left-resp">
+            <label class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="../assets/img/lang/{{lang}}.svg" alt="{{lang}}" /> <!--{{config.lang.title | translate}}-->
+            </label>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="../{{x.code}}" ng-repeat="x in config.languages"><img src="../assets/img/lang/{{x.code}}.svg" alt="{{x.code}}" /> {{x.title | translate}}</a>
+                <!--<a class="dropdown-item" href="" ng-repeat="x in config.languages" ng-click="setLang(x)"><img src="../assets/img/lang/{{x.code}}.svg" alt="{{x.code}}" /> {{x.title | translate}}</a>-->
+            </div>
+        </div>
+        <button class="navbar-toggler" type="button" aria-label="Toggle navigation" onclick="openNav()">
+            <span class="navbar-toggler-icon">
+                <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+            </span>
+        </button>
+        <div class="collapse navbar-collapse text-uppercase" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="" title="description" ng-click="goto(1)">{{'description' | translate}}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="" title="gallery" ng-click="goto(2)">{{'gallery' | translate}}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="" title="attributes" ng-click="goto(3)">{{'attributes' | translate}}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="" title="location" ng-click="goto(4)">{{'location' | translate}}</a>
+                </li>
+                <li ng-if="info.about" class="nav-item">
+                    <a class="nav-link" href="" title="about us" ng-click="goto(5)">{{'about us' | translate}}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="" title="kontakt" ng-click="goto(6)">{{'contact' | translate}}</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="mySidenav" class="sidenav text-uppercase" onclick="closeNav()" ng-cloak>
+        <!--<a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="padding-top:100px">&times;</a>-->
+        <!--<div class="mt-5">
+            <a>{{'menu' | translate}}</a><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        </div>-->
+        <a href="" title="{{'description' | translate}}" ng-click="goto(1)">{{'description' | translate}}</a>
+        <a href="" title="{{'gallery' | translate}}" ng-click="goto(2)">{{'gallery' | translate}}</a>
+        <a href="" title="{{'attributes' | translate}}" ng-click="goto(3)">{{'attributes' | translate}}</a>
+        <a href="" title="{{'location' | translate}}" ng-click="goto(4)">{{'location' | translate}}</a>
+        <a ng-if="info.about" href="" title="{{'about us' | translate}}" ng-click="goto(5)">{{'about us' | translate}}</a>
+        <a href="" title="{{'contact' | translate}}" ng-click="goto(6)">{{'contact' | translate}}</a>
+    </div>
+</div>
