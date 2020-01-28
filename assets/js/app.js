@@ -53,12 +53,6 @@ angular.module('app', ['ngStorage', 'pascalprecht.translate', 'ngMaterial'])
     var queryString = location.search;
     var params = queryString.split('&');
 
-    if (params.length > 1) {
-        $scope.page = parseInt(params[1].substring(5, 6));
-    } else {
-        $scope.page = 1;
-    }
-
     var data = {
         loading: false,
         records: [],
@@ -87,20 +81,12 @@ angular.module('app', ['ngStorage', 'pascalprecht.translate', 'ngMaterial'])
                   }
               }
               /*** lang ***/
-              loadProducts();
-              loadInfo();
+              loadProducts($rootScope.lang);
+              loadInfo($rootScope.lang);
               loadServices();
           });
     };
     getConfig();
-    //if (!angular.isDefined($sessionStorage.config)) {
-    //    getConfig();
-    //} else {
-    //    $rootScope.config = $sessionStorage.config;
-    //    //reloadPage();
-    //}
-
-    //$scope.year = (new Date).getFullYear();
 
     $scope.setLang = function (x) {
         $rootScope.config.lang = x;
@@ -109,28 +95,25 @@ angular.module('app', ['ngStorage', 'pascalprecht.translate', 'ngMaterial'])
         $translate.use(x.code);
         $translatePartialLoader.addPart('main');
         //window.location.href = window.location.origin + '?lang=' + x.code;
-        loadProducts();
-        loadInfo();
+        loadProducts(x.code);
+        loadInfo(x.code);
         loadServices();
     };
-    //if (angular.isDefined($sessionStorage.config)) {
-    //    $scope.setLang($sessionStorage.lang);
-    //}
 
-    var loadProducts = () => {
+
+    var loadProducts = (lang) => {
         $scope.d.loading = true;
-        f.post('Products', 'Load', { lang: $sessionStorage.lang }).then((d) => {
+        f.post('Products', 'Load', { lang: lang }).then((d) => {
             $scope.d.records = d;
             $scope.d.loading = false;
         });
     }
 
-    var loadInfo = () => {
-        f.post('Info', 'Load', { lang: $sessionStorage.lang }).then((d) => {
+    var loadInfo = (lang) => {
+        f.post('Info', 'Load', { lang: lang }).then((d) => {
             $rootScope.info = d;
         });
     }
-    //loadInfo();
 
     var loadMainGallery = () => {
         f.post('Info', 'LoadMainGellery', {}).then((d) => {
