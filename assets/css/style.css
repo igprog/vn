@@ -338,19 +338,19 @@ header {
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 22px;
+  font-size: 18px;
   color: #fff;
   display: block;
   transition: 0.3s;
 }
 
 .sidenav a:hover {
-  color: #f1f1f1;
+  color: #20708f;
 }
 
 .sidenav .closebtn {
   position: absolute;
-  top: 0;
+  top: 45px;
   right: 25px;
   font-size: 36px;
   margin-left: 50px;

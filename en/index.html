@@ -93,17 +93,17 @@
             </ul>
         </div>
     </nav>
-    <div id="mySidenav" class="sidenav text-uppercase" onclick="closeNav()" ng-cloak>
-        <!--<a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="padding-top:100px">&times;</a>-->
-        <!--<div class="mt-5">
-            <a>{{'menu' | translate}}</a><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        </div>-->
-        <a href="#section1" title="{{'description' | translate}}">{{'description' | translate}}</a>
-        <a href="#section2" title="{{'gallery' | translate}}">{{'gallery' | translate}}</a>
-        <a href="#section3" title="{{'attributes' | translate}}">{{'attributes' | translate}}</a>
-        <a href="#section4" title="{{'location' | translate}}">{{'location' | translate}}</a>
-        <a ng-if="info.about" href="#section5" title="{{'about us' | translate}}">{{'about us' | translate}}</a>
-        <a href="#section6" title="{{'contact' | translate}}">{{'contact' | translate}}</a>
+    <div id="mySidenav" class="sidenav text-uppercase" ng-cloak>
+        <div>
+            <a class="text-white" title="{{'menu' | translate}}" ><strong>{{'menu' | translate}}</strong></a><a href="javascript:void(0)" class="closebtn" onclick="closeNav()"  title="{{'close' | translate}}"><strong>&times;</strong></a>
+            <hr style="margin:0 5px 10px 5px; background-color:#fff" />
+        </div>
+        <a href="#section1" onclick="closeNav()" title="{{'description' | translate}}">{{'description' | translate}}</a>
+        <a href="#section2" onclick="closeNav()" title="{{'gallery' | translate}}">{{'gallery' | translate}}</a>
+        <a href="#section3" onclick="closeNav()" title="{{'attributes' | translate}}">{{'attributes' | translate}}</a>
+        <a href="#section4" onclick="closeNav()" title="{{'location' | translate}}">{{'location' | translate}}</a>
+        <a ng-if="info.about" onclick="closeNav()" href="#section5" title="{{'about us' | translate}}">{{'about us' | translate}}</a>
+        <a href="#section6" onclick="closeNav()" title="{{'contact' | translate}}">{{'contact' | translate}}</a>
     </div>
 
     <header class="text-white banner"></header>

@@ -62,6 +62,34 @@ angular.module('app', ['ngStorage', 'pascalprecht.translate', 'ngMaterial'])
     }
     $scope.d = data;
 
+    var loadProducts = (lang) => {
+        $scope.d.loading = true;
+        f.post('Products', 'Load', { lang: lang }).then((d) => {
+            $scope.d.records = d;
+            $scope.d.loading = false;
+        });
+    }
+
+    var loadInfo = (lang) => {
+        f.post('Info', 'Load', { lang: lang }).then((d) => {
+            debugger;
+            $rootScope.info = d;
+        });
+    }
+
+    var loadMainGallery = () => {
+        f.post('Info', 'LoadMainGellery', {}).then((d) => {
+            $scope.d.mainGallery = d;
+        });
+    }
+    loadMainGallery();
+
+    var loadServices = () => {
+        f.post('Options', 'Load', { type: 'services' }).then((d) => {
+            $scope.d.services = d;
+        });
+    }
+
     var getConfig = function () {
         $http.get('../config/config.json')
           .then(function (response) {
@@ -88,7 +116,11 @@ angular.module('app', ['ngStorage', 'pascalprecht.translate', 'ngMaterial'])
     };
     getConfig();
 
+
+
+
     $scope.setLang = function (x) {
+        debugger;
         $rootScope.config.lang = x;
         $sessionStorage.lang = x.code;
         $rootScope.lang = $sessionStorage.lang;
@@ -100,33 +132,6 @@ angular.module('app', ['ngStorage', 'pascalprecht.translate', 'ngMaterial'])
         loadServices();
     };
 
-
-    var loadProducts = (lang) => {
-        $scope.d.loading = true;
-        f.post('Products', 'Load', { lang: lang }).then((d) => {
-            $scope.d.records = d;
-            $scope.d.loading = false;
-        });
-    }
-
-    var loadInfo = (lang) => {
-        f.post('Info', 'Load', { lang: lang }).then((d) => {
-            $rootScope.info = d;
-        });
-    }
-
-    var loadMainGallery = () => {
-        f.post('Info', 'LoadMainGellery', {}).then((d) => {
-            $scope.d.mainGallery = d;
-        });
-    }
-    loadMainGallery();
-
-    var loadServices = () => {
-        f.post('Options', 'Load', { type: 'services' }).then((d) => {
-            $scope.d.services = d;
-        });
-    }
 
     $scope.goto = function (x) {
         var newHash = 'section' + x;
