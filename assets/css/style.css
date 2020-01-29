@@ -11,7 +11,7 @@ body {
     background: #fafafa;
 }
 .banner {
-    background: url("../img/banner.jpg") no-repeat center center;
+    background: url("../img/banner.jpg") no-repeat center right;
     background-size: cover;
 }
 .font-beauty {
