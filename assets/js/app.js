@@ -1,6 +1,6 @@
 ﻿/*!
 app.js
-(c) 2019 IG PROG, www.igprog.hr
+(c) 2020 IG PROG, www.igprog.hr
 */
 angular.module('app', ['ngStorage', 'pascalprecht.translate', 'ngMaterial'])
 .config(['$httpProvider', '$translateProvider', '$translatePartialLoaderProvider', ($httpProvider, $translateProvider, $translatePartialLoaderProvider) => {
@@ -72,7 +72,6 @@ angular.module('app', ['ngStorage', 'pascalprecht.translate', 'ngMaterial'])
 
     var loadInfo = (lang) => {
         f.post('Info', 'Load', { lang: lang }).then((d) => {
-            debugger;
             $rootScope.info = d;
         });
     }
@@ -88,6 +87,12 @@ angular.module('app', ['ngStorage', 'pascalprecht.translate', 'ngMaterial'])
         f.post('Options', 'Load', { type: 'services' }).then((d) => {
             $scope.d.services = d;
         });
+    }
+
+    var loadData = () => {
+        loadProducts($rootScope.lang);
+        loadInfo($rootScope.lang);
+        loadServices();
     }
 
     var getConfig = function () {
@@ -109,18 +114,30 @@ angular.module('app', ['ngStorage', 'pascalprecht.translate', 'ngMaterial'])
                   }
               }
               /*** lang ***/
-              loadProducts($rootScope.lang);
-              loadInfo($rootScope.lang);
-              loadServices();
+              
+              /*** reload page ***/
+              if (typeof (Storage) !== 'undefined') {
+                  if (localStorage.version) {
+                      if (localStorage.version !== $scope.config.version) {
+                          localStorage.version = $scope.config.version;
+                          window.location.reload(true);
+                          loadData();
+                      } else {
+                          loadData();
+                      }
+                  } else {
+                      localStorage.version = $scope.config.version;
+                      loadData();
+                  }
+              } else {
+                  loadData();
+              }
+              /*** reload page ***/
           });
     };
     getConfig();
 
-
-
-
     $scope.setLang = function (x) {
-        debugger;
         $rootScope.config.lang = x;
         $sessionStorage.lang = x.code;
         $rootScope.lang = $sessionStorage.lang;
@@ -132,7 +149,6 @@ angular.module('app', ['ngStorage', 'pascalprecht.translate', 'ngMaterial'])
         loadServices();
     };
 
-
     $scope.goto = function (x) {
         var newHash = 'section' + x;
         if ($location.hash() !== newHash) {
@@ -143,7 +159,6 @@ angular.module('app', ['ngStorage', 'pascalprecht.translate', 'ngMaterial'])
     };
 
 }])
-
 
 .controller('detailsCtrl', ['$scope', '$http', '$rootScope', 'f', '$sessionStorage', '$translate', function ($scope, $http, $rootScope, f, $sessionStorage, $translate) {
     var queryString = location.search;

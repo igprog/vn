@@ -39,6 +39,7 @@
     <script src="../assets/js/vendor/ngStorage.min.js"></script>
     <script src="../assets/js/vendor/angular-translate.min.js"></script>
     <script src="../assets/js/vendor/angular-translate-loader-partial.min.js"></script>
+    <script src="../assets/js/vendor/lazysizes.min.js" async></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/favicon.ico?v=1" />
     <style>
@@ -104,7 +105,7 @@
         <a href="#section2" onclick="closeNav()" title="{{'gallery' | translate}}">{{'gallery' | translate}}</a>
         <a href="#section3" onclick="closeNav()" title="{{'attributes' | translate}}">{{'attributes' | translate}}</a>
         <a href="#section4" onclick="closeNav()" title="{{'location' | translate}}">{{'location' | translate}}</a>
-        <a ng-if="info.about" onclick="closeNav()" href="#section5" title="{{'about us' | translate}}">{{'about us' | translate}}</a>
+        <a ng-if="info.about" href="#section5" onclick="closeNav()" title="{{'about us' | translate}}">{{'about us' | translate}}</a>
         <a href="#section6" onclick="closeNav()" title="{{'contact' | translate}}">{{'contact' | translate}}</a>
     </div>
     
@@ -154,7 +155,7 @@
                     </card-directive>
                 </div>
             </div>-->
-            <div class="text-center">
+            <div class="text-center" ng-cloak>
                 <h2 class="text-primary text-uppercase">{{'gallery' | translate}}</h2>
                 <gallery-directive data="d.records[0]"></gallery-directive>
             </div>
@@ -205,7 +206,7 @@
         <div ng-if="config.showfollow" class="container slideanim text-left pt-5">
             <div class="row">
                 <div class="col text-right pr-5 div-wrapper">
-                    <img src="../assets/img/smartphone.png" alt="smartphone.png" class="img-fluid follow-img" />
+                    <img data-src="../assets/img/smartphone.png" alt="smartphone.png" class="img-fluid follow-img lazyload" />
                 </div>
                 <div class="col" style="padding:100px 20px 100px 20px">
                     <h2 class="text-primary text-uppercase">{{'follow us' | translate}}</h2>

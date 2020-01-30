@@ -1,6 +1,7 @@
 ﻿{
   "debug": true,
   "url": "https://www.vistanekretnine.hr",
+  "version": "1.0.0",
   "domain": "vistanekretnine.hr",
   "sitename": "Vista Nekretnine",
   "showcarddesc": false,
