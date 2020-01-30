@@ -255,7 +255,7 @@ angular.module('app', ['ngStorage', 'pascalprecht.translate', 'ngMaterial'])
     return {
         restrict: 'E',
         scope: {
-            id: '=',
+            productid: '=',
             product: '=',
             shortdesc: '=',
             img: '=',

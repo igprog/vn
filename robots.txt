@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: admin.html
-
-SITEMAP: https://www.vistanekretnine.hr/sitemap.xml
+disallow: /admin.html
+sitemap: https://www.vistanekretnine.hr/sitemap.xml
 

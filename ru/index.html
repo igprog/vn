@@ -114,9 +114,7 @@
 
     <div class="text-center pt-3" onclick="closeNav()" >
         <h1>Vista Nekretnine d.o.o.</h1>
-        <h2>Luxury apartments for sale</h2>
-        <!--<h1>{{info.company | translate}}</h1>
-        <h2>{{'luxury apartments for sale' | translate}}</h2>-->
+        <h2>Элитные квартиры на продажу</h2>
         <hr />
         <div id="section1" class="container section slideanim p-3">
             <div ng-if="info.shortDesc">
@@ -144,7 +142,7 @@
             <hr />
             <div class="row mt-2 p-3 text-center" style="overflow:hidden">
                 <div class="col-lg-4 p-2" ng-repeat="x in d.records track by $index">
-                    <card-directive id="x.id"
+                    <card-directive productid="x.id"
                                     product="x.title"
                                     shortdesc="x.shortDesc"
                                     img="x.img"
