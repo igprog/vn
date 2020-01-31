@@ -113,10 +113,8 @@
     <loading-directive value="d.loading" size="5"></loading-directive>
 
     <div class="text-center pt-3" onclick="closeNav()" >
-        <h1>Vista Nekretnine d.o.o.</h1>
-        <h2>Luxury apartments for sale</h2>
-        <!--<h1>{{info.company | translate}}</h1>
-        <h2>{{'luxury apartments for sale' | translate}}</h2>-->
+        <h1>Vista Nekretnine <span class="small">d.o.o.</span></h1>
+        <h2 class="lead">Luxury apartments for sale</h2>
         <hr />
         <div id="section1" class="container section slideanim p-3">
             <div ng-if="info.shortDesc">
@@ -125,35 +123,8 @@
             <div ng-if="info.longDesc">
                 <p>{{info.longDesc}}</p>
             </div>
-            <!--<h2 class="text-primary text-uppercase">{{'services' | translate}}</h2>
-            <hr />
-            <div ng-if="info.services">
-                <p>{{info.services}}</p>
-            </div>
-            <div ng-if="d.services.length>0" class="row mt-5">
-                <div class="col" ng-repeat="x in d.services">
-                    <img src="assets/img/icon/{{x.icon}}" style="width:100px" />
-                    <h2 class="mt-2">
-                        {{x.title | translate}}
-                    </h2>
-                </div>
-            </div>-->
         </div>
         <div id="section2" class="section slideanim">
-            <!--<h2 class="text-primary text-uppercase">{{'projects' | translate}}</h2>
-            <hr />
-            <div class="row mt-2 p-3 text-center" style="overflow:hidden">
-                <div class="col-lg-4 p-2" ng-repeat="x in d.records track by $index">
-                    <card-directive productid="x.id"
-                                    product="x.title"
-                                    shortdesc="x.shortDesc"
-                                    img="x.img"
-                                    link="'details'"
-                                    showdesc="config.showcarddesc"
-                                    lang="lang">
-                    </card-directive>
-                </div>
-            </div>-->
             <div class="text-center">
                 <h2 class="text-primary text-uppercase">{{'gallery' | translate}}</h2>
                 <gallery-directive data="d.records[0]"></gallery-directive>
