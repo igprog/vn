@@ -287,6 +287,7 @@ public class Products : System.Web.Services.WebService {
             x.favicon = o.favicon;
             x.type = o.type;
             x.order = o.order;
+            x.isVisible = o.isVisible;
             xx.Add(x);
         }
         return xx;

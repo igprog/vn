@@ -377,7 +377,18 @@
                                 <hr style="margin-top:0" />
                                 <div class="form-group" ng-repeat="y in x.productOptions">
                                     <label>{{y.title | translate}} <span>{{y.unit}}</span>:</label>
-                                    <input ng-model="y.val" type="text" class="form-control" maxlength="200">
+                                    <input ng-model="y.isVisible" type="checkbox" title="vidljiv">
+                                    <div class="input-group mb-3">
+                                        <input ng-model="y.val" type="text" class="form-control" maxlength="200">
+                                        <div class="input-group-append">
+                                            <!--<input ng-model="y.isVisible" type="checkbox" class="input-group-text" title="vidljiv">-->
+                                            <span class="input-group-text"><input ng-model="y.order" type="number" class="form-control" style="width:70px" title="redosljed"></span>
+                                        </div>
+                                    </div>
+
+
+                                    <!--<input ng-model="y.val" type="text" class="form-control" maxlength="200">
+                                    <input id="visible_{{y.val}}" ng-model="y.isVisible" type="checkbox" > <label for="visible_{{y.val}}">Vidljiv</label>-->
                                 </div>
                                 <div class="text-right">
                                     <button ng-click="f.save(x)" type="submit" class="btn btn-outline-success"><i class="fa fa-save"></i> Spremi</button>

@@ -31,6 +31,7 @@ public class Options : System.Web.Services.WebService {
         public string favicon;
         public string type;
         public int order;
+        public bool isVisible;
     }
 
     [WebMethod]
