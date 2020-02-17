@@ -158,6 +158,13 @@ angular.module('app', ['ngStorage', 'pascalprecht.translate', 'ngMaterial'])
         }
     };
 
+    $scope.tick = 0;
+    var getTime = () => {
+        var d = new Date();
+        $scope.tick = d.getTime();
+    }
+    getTime();
+
 }])
 
 .controller('detailsCtrl', ['$scope', '$http', '$rootScope', 'f', '$sessionStorage', '$translate', function ($scope, $http, $rootScope, f, $sessionStorage, $translate) {

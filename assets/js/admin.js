@@ -511,6 +511,13 @@ angular.module('admin', ['ngStorage', 'pascalprecht.translate', 'ngMaterial'])
         }
     }
 
+    $scope.tick = 0;
+    var getTime = () => {
+        var d = new Date();
+        $scope.tick = d.getTime();
+    }
+    getTime();
+
     $scope.f = {
         upload: (x) => {
             return upload(x);
