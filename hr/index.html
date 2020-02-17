@@ -75,22 +75,22 @@
         <div class="collapse navbar-collapse text-uppercase" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#section1" title="{{'description' | translate}}" ng-cloak>{{'description' | translate}}</a>
+                    <a class="nav-link" href="#opis" title="{{'description' | translate}}" ng-cloak>{{'description' | translate}}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#section2" title="{{'gallery' | translate}}" ng-cloak>{{'gallery' | translate}}</a>
+                    <a class="nav-link" href="#galerija" title="{{'gallery' | translate}}" ng-cloak>{{'gallery' | translate}}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#section3" title="{{'attributes' | translate}}" ng-cloak>{{'attributes' | translate}}</a>
+                    <a class="nav-link" href="#karakteristike" title="{{'attributes' | translate}}" ng-cloak>{{'attributes' | translate}}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#section4" title="{{'location' | translate}}" ng-cloak>{{'location' | translate}}</a>
+                    <a class="nav-link" href="#lokacija" title="{{'location' | translate}}" ng-cloak>{{'location' | translate}}</a>
                 </li>
                 <li ng-if="info.about" class="nav-item">
-                    <a class="nav-link" href="#section5" title="{{'about us' | translate}}" ng-cloak>{{'about us' | translate}}</a>
+                    <a class="nav-link" href="#o-nama" title="{{'about us' | translate}}" ng-cloak>{{'about us' | translate}}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#section6" title="{{'contact' | translate}}" ng-cloak>{{'contact' | translate}}</a>
+                    <a class="nav-link" href="#kontakt" title="{{'contact' | translate}}" ng-cloak>{{'contact' | translate}}</a>
                 </li>
             </ul>
         </div>
@@ -100,23 +100,23 @@
             <a class="text-white" title="{{'menu' | translate}}" ><strong>{{'menu' | translate}}</strong></a><a href="javascript:void(0)" class="closebtn" onclick="closeNav()"  title="{{'close' | translate}}"><strong>&times;</strong></a>
             <hr style="margin:0 5px 10px 5px; background-color:#fff" />
         </div>
-        <a href="#section1" onclick="closeNav()" title="{{'description' | translate}}">{{'description' | translate}}</a>
-        <a href="#section2" onclick="closeNav()" title="{{'gallery' | translate}}">{{'gallery' | translate}}</a>
-        <a href="#section3" onclick="closeNav()" title="{{'attributes' | translate}}">{{'attributes' | translate}}</a>
-        <a href="#section4" onclick="closeNav()" title="{{'location' | translate}}">{{'location' | translate}}</a>
-        <a ng-if="info.about" onclick="closeNav()" href="#section5" title="{{'about us' | translate}}">{{'about us' | translate}}</a>
-        <a href="#section6" onclick="closeNav()" title="{{'contact' | translate}}">{{'contact' | translate}}</a>
+        <a href="#opis" onclick="closeNav()" title="{{'description' | translate}}">{{'description' | translate}}</a>
+        <a href="#galerija" onclick="closeNav()" title="{{'gallery' | translate}}">{{'gallery' | translate}}</a>
+        <a href="#karakteristike" onclick="closeNav()" title="{{'attributes' | translate}}">{{'attributes' | translate}}</a>
+        <a href="#lokacija" onclick="closeNav()" title="{{'location' | translate}}">{{'location' | translate}}</a>
+        <a ng-if="info.about" href="#o-nama" onclick="closeNav()" title="{{'about us' | translate}}">{{'about us' | translate}}</a>
+        <a href="#kontakt" onclick="closeNav()" title="{{'contact' | translate}}">{{'contact' | translate}}</a>
     </div>
 
     <header class="text-white banner"></header>
 
     <loading-directive value="d.loading" size="5"></loading-directive>
 
-    <div class="text-center pt-3" onclick="closeNav()" >
+    <div class="text-center pt-3" onclick="closeNav()">
         <h1>Vista Nekretnine <span class="small">d.o.o.</span></h1>
         <h2 class="lead">Prodaja luksuznih stanova</h2>
         <hr />
-        <div id="section1" class="container section slideanim p-3">
+        <div id="opis" class="container section slideanim p-3">
             <div ng-if="info.shortDesc">
                 <h3>{{info.shortDesc}}</h3>
             </div>
@@ -124,14 +124,14 @@
                 <p>{{info.longDesc}}</p>
             </div>
         </div>
-        <div id="section2" class="section slideanim">
-            <div class="text-center">
+        <div id="galerija" class="section slideanim">
+            <div class="text-center" ng-cloak>
                 <h2 class="text-primary text-uppercase">{{'gallery' | translate}}</h2>
                 <gallery-directive data="d.records[0]"></gallery-directive>
             </div>
         </div>
 
-        <div id="section3" class="container-fluid section slideanim text-left padding-resp-5">
+        <div id="karakteristike" class="container-fluid section slideanim text-left padding-resp-5">
             <div class="row">
                 <div class="col-lg-4 p-3" style="background-color:#eeeeee">
                     <div class="p-3">
@@ -158,14 +158,14 @@
             <hr />
         </div>
 
-        <div id="section4" class="container section slideanim p-3">
+        <div id="lokacija" class="container section slideanim p-3">
             <h2 class="text-primary text-uppercase">{{'location' | translate}}</h2>
             <div style="height:500px" class="padding-resp-5">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7930.1072868819165!2d14.294167312628616!3d45.33146081058337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4764a8720d01e717%3A0x1ae21c72f2792a9e!2sStubi%C5%A1te%20Baredi%2017%2C%2051410%2C%20Opatija!5e0!3m2!1shr!2shr!4v1579191502348!5m2!1shr!2shr" frameborder="0" style="border:0; width:100%; height:95%" allowfullscreen=""></iframe>
             </div>
         </div>
 
-        <div ng-if="info.about" id="section5" class="container section slideanim text-center p-3">
+        <div ng-if="info.about" id="o-nama" class="container section slideanim text-center p-3">
             <h2 class="text-primary text-uppercase">{{'about us' | translate}}</h2>
             <hr />
             <div>
@@ -176,7 +176,7 @@
         <div ng-if="config.showfollow" class="container slideanim text-left pt-5">
             <div class="row">
                 <div class="col text-right pr-5 div-wrapper">
-                    <img src="../assets/img/smartphone.png" alt="smartphone.png" class="img-fluid follow-img" />
+                    <img data-src="../assets/img/smartphone.png" alt="smartphone.png" class="img-fluid follow-img lazyload" />
                 </div>
                 <div class="col" style="padding:100px 20px 100px 20px">
                     <h2 class="text-primary text-uppercase">{{'follow us' | translate}}</h2>
@@ -190,7 +190,7 @@
         </div>
     </div>
 
-    <div id="section6" class="footer" onclick="closeNav()">
+    <div id="kontakt" class="footer" onclick="closeNav()">
         <div class="container-fluid section text-white padding-resp-5 slideanim tranparent pt-5">
             <ng-include src="'../assets/partials/contact.html'"></ng-include>
             <div class="fixed text-right d-none d-sm-block" style="margin:0 20px 80px 0">
@@ -204,50 +204,10 @@
 
 
     <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/main.js"></script>
     <script type="text/javascript" src="../assets/js/vendor/jquery.floating-social-share.min.js"></script>
 
     <script>
-        $(document).ready(function () {
-            $(".navbar a, footer a[href='#home'], a").on('click', function (event) {
-                if (this.hash !== "") {
-                    event.preventDefault();
-                    var hash = this.hash;
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 900, function () {
-                        window.location.hash = hash;
-                    });
-                }
-            });
-
-            var slideanim = function () {
-                $(".slideanim").each(function () {
-                    var pos = $(this).offset().top;
-                    var winTop = $(window).scrollTop();
-                    if (pos < winTop + 600) {
-                        $(this).addClass("slide");
-                    }
-                });
-            }
-            slideanim();
-
-            $(window).scroll(function () {
-                slideanim();
-            });
-        })
-
-        function openNav() {
-            if (document.getElementById("mySidenav").style.width == "250px") {
-                document.getElementById("mySidenav").style.width = "0";
-            } else {
-                document.getElementById("mySidenav").style.width = "250px";
-            }
-        }
-
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-        }
-
         $("body").floatingSocialShare({
             buttons: [
               "facebook", "google-plus", "twitter", "pinterest"
