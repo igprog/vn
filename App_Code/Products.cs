@@ -211,7 +211,8 @@ public class Products : System.Web.Services.WebService {
         try {
             string path = Server.MapPath(string.Format("~/upload/{0}/gallery", productId));
             string path_thumb = Server.MapPath(string.Format("~/upload/{0}/gallery/thumb", productId));
-            string img_ = img.Remove(img.IndexOf("?"));
+
+            string img_ = img.IndexOf("?") > 0 ? img.Remove(img.IndexOf("?")) : img;
             if (Directory.Exists(path)) {
                 string[] gallery = Directory.GetFiles(path);
                 string[] gallery_thumb = Directory.GetFiles(path_thumb);
