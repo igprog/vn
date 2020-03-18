@@ -23,7 +23,7 @@
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="200">
     <meta property="og:image:height" content="200">
-    <link href="https://www.vistanekretnine.hr/" rel="canonical" />
+    <link rel="canonical" href="https://www.vistanekretnine.hr/" />
     <link href="../assets/css/vendor/bootstrap.min.css" async rel="stylesheet">
     <link rel="stylesheet" type="text/css" async href="../assets/css/vendor/jquery.floating-social-share.min.css" />
     <link href="../assets/css/style.css" async rel="stylesheet">
@@ -40,6 +40,7 @@
     <script src="../assets/js/vendor/angular-translate.min.js"></script>
     <script src="../assets/js/vendor/angular-translate-loader-partial.min.js"></script>
     <script src="../assets/js/vendor/lazysizes.min.js" async></script>
+    <!--<script src="../assets/js/vendor/jssor.slider-28.0.0.min.js"></script>-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300&display=swap" async rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/favicon.ico?v=1" async />
 </head>
@@ -117,6 +118,7 @@
             <div class="text-center" ng-cloak>
                 <h2 class="text-primary text-uppercase">{{'gallery' | translate}}</h2>
                 <gallery-directive data="d.records[0]"></gallery-directive>
+                <!--<ng-include src="'../assets/partials/gallery.html'"></ng-include>-->
             </div>
         </div>
 

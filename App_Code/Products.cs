@@ -210,14 +210,21 @@ public class Products : System.Web.Services.WebService {
     public string DeleteImg(string productId, string img) {
         try {
             string path = Server.MapPath(string.Format("~/upload/{0}/gallery", productId));
+            string path_thumb = Server.MapPath(string.Format("~/upload/{0}/gallery/thumb", productId));
+            string img_ = img.Remove(img.IndexOf("?"));
             if (Directory.Exists(path)) {
                 string[] gallery = Directory.GetFiles(path);
-                foreach (string file in gallery) {
-                    if (Path.GetFileName(file) == img) {
-                        File.Delete(file);
-                        RemoveMainImg(productId, img);
-                    }
+                string[] gallery_thumb = Directory.GetFiles(path_thumb);
+
+                string imgPath = gallery.Where(a => Path.GetFileName(a) == img_).FirstOrDefault();
+                File.Delete(imgPath);
+
+                if (Directory.Exists(path_thumb)) {
+                    string imgPath_thumb = gallery_thumb.Where(a => Path.GetFileName(a) == img_).FirstOrDefault();
+                    File.Delete(imgPath_thumb);
                 }
+
+                RemoveMainImg(productId, img_);
             }
             return JsonConvert.SerializeObject(LoadData(null), Formatting.None);
         } catch (Exception e) {
