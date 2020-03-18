@@ -2,10 +2,14 @@
     <div ng-repeat="x in data | filter: datatype | orderBy: 'order'">
         <div ng-if="x.val&&x.isVisible">
             <div ng-if="!x.val.includes('|')">
-                <div class="{{datatype==='productDetails'?'lead m-1':'m-1'}}">
+                <div class="m-1">
                     <span class="font-weight-bold">{{x.title | translate}}:</span>
                     <span class="{{datatype==='productDetails'?'float-right':'pl-2'}}">{{x.val | translate}} {{x.unit | translate}}</span>
                 </div>
+                <!--<div class="{{datatype==='productDetails'?'lead m-1':'m-1'}}">
+                    <span class="font-weight-bold">{{x.title | translate}}:</span>
+                    <span class="{{datatype==='productDetails'?'float-right':'pl-2'}}">{{x.val | translate}} {{x.unit | translate}}</span>
+                </div>-->
             </div>
             <div ng-if="x.val.includes('|')" class="row">
                 <div class="col-sm-4" ng-repeat="y in x.val.split('|')">
