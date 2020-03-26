@@ -18,14 +18,32 @@
             </div>
         </div>
     </div>
-    <div ng-if="datatype==='productDetails'" class="font-weight-bold lead pt-5">
+    <div ng-if="datatype==='productDetails'" class="font-weight-bold pt-5">
         <h2 class="text-primary text-uppercase mt-2">{{'documents' | translate}}</h2>
         <hr />
-        <div class="p-2">
-            <a href="../upload/pdf/neto_povrsine.pdf" class="text-success" target="_blank" title="neto_povrsine.pdf"><i class="fa fa-file-pdf"></i> {{'surface areas' | translate}}</a>
+        <div class="card mt-1 card-hover">
+            <a href="../upload/pdf/neto_povrsine.pdf" class="text-decoration-none" target="_blank" title="neto_povrsine.pdf">
+                <div class="card-body">
+                    <i class="fa fa-file-pdf"></i> {{'surface areas' | translate}}
+                    <span class="float-right">50 KB</span>
+                </div>
+            </a>
         </div>
-        <div class="p-2">
-            <a href="../upload/pdf/vasanska1_glavni_projekt.pdf" class="text-success" target="_blank" title="vasanska1_glavni_projekt.pdf" ><i class="fa fa-file-pdf"></i> {{'main project' | translate}} </a>
+        <div class="card mt-1 card-hover">
+            <a href="../upload/pdf/vasanska1_glavni_projekt.pdf" class="text-decoration-none" target="_blank" title="vasanska1_glavni_projekt.pdf">
+                <div class="card-body">
+                    <i class="fa fa-file-pdf"></i> {{'main project' | translate}}
+                    <span class="float-right">3.7 MB</span>
+                </div>
+            </a>
+        </div>
+        <div class="card mt-1 card-hover">
+            <a href="../upload/pdf/prezentacija_ projekt_vista_nekretnine.pdf" class="text-decoration-none" target="_blank" title="prezentacija_ projekt_vista_nekretnine.pdf">
+                <div class="card-body">
+                    <i class="fa fa-file-pdf"></i> {{'presentation' | translate}}
+                    <span class="float-right">9.1 MB</span>
+                </div>
+            </a>
         </div>
     </div>
 </div>

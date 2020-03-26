@@ -394,6 +394,15 @@ header {
     height:42px;
 }
 
+.text-decoration-none {
+    text-decoration:none !important;
+}
+
+.card-hover a :hover {
+    background-color: #20708f;
+    color:#fff !important;
+}
+
 @media (min-width: 1600px) {
     .contact-padding {
         padding: 10px 0px 20px 300px;
