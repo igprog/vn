@@ -111,7 +111,10 @@
                 <h3>{{info.shortDesc}}</h3>
             </div>
             <div ng-if="info.longDesc">
-                <p>{{info.longDesc}}</p>
+                <p class="text-justify">
+                    <iframe name="video" title="youtube video" class="video-frame" height="280" src="https://www.youtube.com/embed/puI40k0Ub-o" frameborder="0" allowfullscreen"></iframe>
+                    {{info.longDesc}}
+                </p>
             </div>
         </div>
         <div id="galerija" class="section slideanim">
