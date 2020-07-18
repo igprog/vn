@@ -97,5 +97,13 @@
   "Electric Roller shutter control": "Električno upravljanje roletama",
   "menu": "Izbornik",
   "close": "Zatvor",
-  "presentation": "Prezentacija"
+  "presentation": "Prezentacija",
+  "ground floor": "Prizemlje",
+  "first floor": "Prvi kat",
+  "second floor": "Drugi kat",
+  "basement": "Podrum",
+  "list": "Popis",
+  "special parts": "Posebni djelovi",
+  "table": "Tablica",
+  "technical description": "Tehnički opis"
 }
