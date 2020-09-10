@@ -409,6 +409,10 @@ header {
     padding: 10px 0px 2px 20px;
 }
 
+.width-resp-50 {
+    width: 50%;
+}
+
 @media (min-width: 1600px) {
     .contact-padding {
         padding: 10px 0px 20px 300px;
@@ -484,7 +488,9 @@ header {
         float:none;
         padding: 0px 0px 20px 0px;
     }
-
+    .width-resp-50 {
+        width: 95%;
+    }
 }
 
 @media screen and (max-width: 450px) {
