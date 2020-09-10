@@ -107,9 +107,14 @@
             <div ng-if="info.shortDesc">
                 <h3>{{info.shortDesc}}</h3>
             </div>
+            <div class="p-3">
+                <video controls>
+                    <source src="../upload/bdcd04a5-f121-4bef-856c-2883e9f6fece/video/vn1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
             <div ng-if="info.longDesc">
                 <p class="text-justify">
-                    <iframe name="video" title="youtube video" class="video-frame" height="280" src="https://www.youtube.com/embed/puI40k0Ub-o" frameborder="0" allowfullscreen"></iframe>
                     {{info.longDesc}}
                 </p>
             </div>
@@ -142,6 +147,9 @@
                             <hr />
                             <options-directive data=d.records[0].productOptions datatype="'productCloseTo'"></options-directive>
                         </div>
+                    </div>
+                    <div class="padding-resp-5">
+                        <iframe name="video" title="youtube video" class="video-frame" height="280" src="https://www.youtube.com/embed/puI40k0Ub-o" frameborder="0" allowfullscreen"></iframe>
                     </div>
                 </div>
             </div>
