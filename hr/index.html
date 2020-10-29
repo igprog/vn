@@ -115,18 +115,22 @@
             </div>
             <div ng-if="info.longDesc">
                 <p class="text-justify">
+                    <img src="../assets/img/sea-view.jpg" alt="sea-view" class="pl-3 float-right d-none d-sm-block" />
                     {{info.longDesc}}
                 </p>
+                <div class="text-center d-block d-sm-none">
+                    <img src="../assets/img/sea-view.jpg" alt="sea-view" class="pt-3" />
+                </div>
             </div>
         </div>
-        <div id="galerija" class="section slideanim">
+        <div id="galerija" class="container section slideanim">
             <div class="text-center" ng-cloak>
                 <h2 class="text-primary text-uppercase">{{'gallery' | translate}}</h2>
                 <gallery-directive data="d.records[0]"></gallery-directive>
             </div>
         </div>
 
-        <div id="karakteristike" class="container-fluid section slideanim text-left padding-resp-5">
+        <div id="karakteristike" class="container section slideanim text-left">
             <div class="row">
                 <div class="col-lg-4 p-3" style="background-color:#eeeeee">
                     <div class="p-3">
@@ -148,15 +152,15 @@
                             <options-directive data=d.records[0].productOptions datatype="'productCloseTo'"></options-directive>
                         </div>
                     </div>
-                    <div class="padding-resp-5">
-                        <iframe name="video" title="youtube video" class="video-frame" height="280" src="https://www.youtube.com/embed/puI40k0Ub-o" frameborder="0" allowfullscreen"></iframe>
+                    <div class="padding-resp-5 text-center">
+                        <iframe name="video" title="youtube video" class="video-frame" height="340" style="width:90%" src="https://www.youtube.com/embed/puI40k0Ub-o" frameborder="0" allowfullscreen"></iframe>
                     </div>
                 </div>
             </div>
-            <hr />
         </div>
 
         <div id="lokacija" class="container-fluid section slideanim p-3">
+            <hr />
             <div class="row">
                 <div class="col-sm-8">
                     <h2 class="text-primary text-uppercase">{{'location' | translate}}</h2>
