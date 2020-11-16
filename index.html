@@ -44,7 +44,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300&display=swap" async rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/favicon.ico?v=1" async />
 </head>
-<body id="home" data-spy="scroll" data-target=".navbar" data-offset="60"  >
+<body ng-if="config" ng-init="setLang({code:'hr', title:'croatian'})" id="home" data-spy="scroll" data-target=".navbar" data-offset="60"  >
     <nav class="navbar navbar-expand-lg fixed-top">
         <a href="./" title="{{config.sitename}}" >
             <img src="../assets/img/logo.png" class="logo-size" alt="{{config.sitename}}" ng-cloak />

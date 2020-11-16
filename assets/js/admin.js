@@ -269,6 +269,11 @@ angular.module('admin', ['ngStorage', 'pascalprecht.translate', 'ngMaterial'])
                         },
                         {
                             id: null,
+                            lang: 'de',
+                            tran: null
+                        },
+                        {
+                            id: null,
                             lang: 'ru',
                             tran: null
                         }
@@ -379,6 +384,11 @@ angular.module('admin', ['ngStorage', 'pascalprecht.translate', 'ngMaterial'])
                         {
                             id: null,
                             lang: 'en',
+                            tran: null
+                        },
+                        {
+                            id: null,
+                            lang: 'de',
                             tran: null
                         },
                         {

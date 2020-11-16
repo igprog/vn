@@ -10,7 +10,7 @@
 
     gtag('config', 'UA-156335343-1');
       </script>-->
-    <title>Vista Nekretnine d.o.o. | Luxury apartments for sale | Opatija - Croatia</title>
+    <title>Vista Nekretnine d.o.o. | Verkauf von Luxuswohnungen | Opatija - Croatia</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Luxury apartments for sale in Opatija. The apartment is located in a quiet area near all amenities with an open sea view">
@@ -42,7 +42,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300&display=swap" async rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/favicon.ico?v=1" async />
 </head>
-<body ng-if="config" ng-init="setLang({code:'en', title:'english'})" id="home" data-spy="scroll" data-target=".navbar" data-offset="60">
+<body ng-if="config" ng-init="setLang({code:'de', title:'german'})" id="home" data-spy="scroll" data-target=".navbar" data-offset="60">
     <nav class="navbar navbar-expand-lg fixed-top">
         <a href="./" title="{{config.sitename}}">
             <img src="../assets/img/logo.png" class="logo-size" alt="{{config.sitename}}" ng-cloak />
@@ -85,7 +85,7 @@
     </nav>
     <div id="mySidenav" class="sidenav text-uppercase" ng-cloak>
         <div>
-            <a class="text-white" title="{{'menu' | translate}}" ><strong>{{'menu' | translate}}</strong></a><a href="javascript:void(0)" class="closebtn" onclick="closeNav()"  title="{{'close' | translate}}"><strong>&times;</strong></a>
+            <a class="text-white" title="{{'menu' | translate}}"><strong>{{'menu' | translate}}</strong></a><a href="javascript:void(0)" class="closebtn" onclick="closeNav()" title="{{'close' | translate}}"><strong>&times;</strong></a>
             <hr style="margin:0 5px 10px 5px; background-color:#fff" />
         </div>
         <a href="#description" onclick="closeNav()" title="{{'description' | translate}}">{{'description' | translate}}</a>
@@ -100,9 +100,9 @@
 
     <loading-directive value="d.loading" size="5"></loading-directive>
 
-    <div class="text-center pt-3" onclick="closeNav()" >
+    <div class="text-center pt-3" onclick="closeNav()">
         <h1>Vista Nekretnine <span class="small">d.o.o.</span></h1>
-        <h2 class="lead">Luxury apartments for sale in Croatia</h2>
+        <h2 class="lead">Luxuswohnungen zum Verkauf in Kroatien</h2>
         <hr />
         <div id="description" class="container section slideanim p-3">
             <div ng-if="info.shortDesc">
@@ -233,3 +233,4 @@
     </script>
 </body>
 </html>
+
