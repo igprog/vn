@@ -212,6 +212,11 @@ angular.module('app', ['ngStorage', 'pascalprecht.translate', 'ngMaterial'])
 
     $scope.send = function (d) {
         $scope.loading = true;
+        if (d.name === null || d.email === null || d.phone === null) {
+            alert($translate.instant('all fields marked with an asterisk (*) are required') + '.');
+            $scope.loading = false;
+            return false;
+        }
         f.post(service, 'Send', { x: d }).then((d) => {
             $scope.d = d;
             $scope.loading = false;
